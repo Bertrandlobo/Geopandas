@@ -1,0 +1,47 @@
+Project- Part(A)
+
+
+Using Pythons gtfs_functions Package for transit stop and line frequencies and discussion of bus speeds using keplerGl on a map from GTFS data.
+
+
+GOAL: 
+An Introduction to Python package called gtfs_functions which is helpful in faster GTFS spatial Analysis.
+In this project, a map is created which shows the line frequencies from GTFS data for the city of San Francisco, California. The data is procured from SFTMA, a body for transport in San Francisco.
+
+STEPS: 
+1.	Read the GTFS files into Pandas DataFrames and GeoPandas GeoDataFrames
+2.	Calculate frequency per line, frequency per stop
+3.	Show each of the above on a map by a variable
+4.	Export to spatial file either ESRI shape file or GeoJson.
+DATA SOURCE: https://www.sfmta.com/reports/gtfs-transit-data
+METHODOLOGY: 
+1. Install packages: gtfs_functions, Geopandas and read the GTFS datasets. Code screenshots seen below. The corresponding routes, stops, stop times, routes and shapes can be exported from the GTFS data.
+Routes: 
+
+	
+Rou 
+Stops:  
+Stop times, trips and shapes: 
+ Marked in black circles show geometry which can later be visualized on a map due to Geodataframes.
+ 
+2. Stop frequencies, line frequencies data for single headers.
+Stop frequencies:  
+Line frequencies: 
+ 
+Similar procedure can be followed for bus segments, bus speeds, segment frequencies with the GTFS data. All the above-mentioned variables will now be visualized on a map.
+3.  Mapping the Calculated Variables. 
+a. Line Frequency
+ 
+ 
+b. stop frequency
+The lines of code are similar except the step frequency variable is used.
+ 
+4. The maps can be exported as shape files or Geojson to visualize further in GIS software
+
+
+CONCLUSION:
+The function called in this project are a part of powerful python packages that make it easy to parse and visualize GTFS data. For example, gtfs_functions rely on Partridge that is very useful for GTFS. map_gdf() and save_gdf() are built on folium, another powerful python package. Other packaged used are Geopandas, pandas, branca, jenkspy and seen in the screenshot below.
+ 
+Discussion:
+
+Ubers kepler gl can be used also to map the schedules speeds in a particular segment and would be part B of this project. To add on, histograms, heatmaps, line charts, can also be shown in the interactive project if needed
